@@ -50,17 +50,21 @@ Voting Classifier (Ensemble)
 
 Evaluates models using:
 
-Accuracy
+Accuracy: 0.9610
 
-Precision
+Precision: 0.9550
 
-Recall
+Recall: 0.9676
 
-F1-Score
+F1-Score: 0.9612
 
-ROC-AUC Score
+ROC-AUC Score: 0.9936
 
-Confusion Matrix
+Confusion Matrix: 
+
+[[ 1823  61
+
+  86     1798]]
 
 **🔍 6. Model Interpretability**
 
