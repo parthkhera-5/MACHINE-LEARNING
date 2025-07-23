@@ -1,4 +1,4 @@
-#**🫀 Cardiovascular Risk Prediction - Machine Learning Project**
+**#🫀 Cardiovascular Risk Prediction - Machine Learning Project**
 
 **🏡 Overview**
 
