@@ -1,0 +1,205 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardiovascular Risk Prediction</title>
+  <link rel="stylesheet" href="/static/medical_detail.css" />
+</head>
+<body>
+  <div class="home">
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+
+    <div class="main2">
+      <h2>Disease Details</h2>
+    </div>
+
+    <div class="personal">
+      <form action="/predict" method="post">
+
+       
+        <label for="BPMeds">Are you taking BP Medicine?</label>
+        <div id="BPMeds" class="radio-group">
+          <label for="bpmeds_yes">
+            <input type="radio" id="bpmeds_yes" name="BPMeds" value="1"> Yes
+          </label>
+          <label for="bpmeds_no">
+            <input type="radio" id="bpmeds_no" name="BPMeds" value="0"> No
+          </label>
+        </div> 
+        <label for="diabetes">Are you suffering from Diabetes?</label>
+        <div id="diabetes" class="radio-group">
+          <label for="diabetes_yes">
+            <input type="radio" id="diabetes_yes" name="diabetes" value="1"> Yes
+          </label>
+          <label for="diabetes_no">
+            <input type="radio" id="diabetes_no" name="diabetes" value="0"> No
+          </label>
+        </div> 
+        <label for="prevalentStroke">Have you had a Stroke?</label>
+        <div id="prevalentStroke" class="radio-group">
+          <label for="prevalentStroke_yes">
+            <input type="radio" id="prevalentStroke_yes" name="prevalentStroke" value="1"> Yes
+          </label>
+          <label for="prevalentStroke_no">
+            <input type="radio" id="prevalentStroke_no" name="prevalentStroke" value="0"> No
+          </label>
+        </div> 
+        <label for="prevalentHyp">Do you have Hypertension?</label>
+        <div id="prevalentHyp" class="radio-group">
+          <label for="prevalentHyp_yes">
+            <input type="radio" id="prevalentHyp_yes" name="prevalentHyp" value="1"> Yes
+          </label>
+          <label for="prevalentHyp_no">
+            <input type="radio" id="prevalentHyp_no" name="prevalentHyp" value="0"> No
+          </label>
+        </div>
+
+        <div class="submit">
+            <a href="/templates/smoking_detail.html">Previous</a>
+            <a href="/templates/medical_checkup.html">Next</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Details</title>
+  <link rel="stylesheet" href="/static/medical_detail.css" />
+</head>
+<body>
+  <div class="home">
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+
+    <div class="main2">
+      <h2>Disease Details</h2>
+    </div>
+
+    <div class="personal">
+      <form action="/medical_detail" method="post">
+
+        <label for="BPMeds">Are you taking BP Medicine?</label>
+        <div id="BPMeds" class="radio-group">
+          <label for="bpmeds_yes">
+            <input type="radio" id="bpmeds_yes" name="BPMeds" value="1" required> Yes
+          </label>
+          <label for="bpmeds_no">
+            <input type="radio" id="bpmeds_no" name="BPMeds" value="0" required> No
+          </label>
+        </div>
+
+        <label for="diabetes">Are you suffering from Diabetes?</label>
+        <div id="diabetes" class="radio-group">
+          <label for="diabetes_yes">
+            <input type="radio" id="diabetes_yes" name="diabetes" value="1" required> Yes
+          </label>
+          <label for="diabetes_no">
+            <input type="radio" id="diabetes_no" name="diabetes" value="0" required> No
+          </label>
+        </div>
+
+        <label for="prevalentStroke">Have you had a Stroke?</label>
+        <div id="prevalentStroke" class="radio-group">
+          <label for="prevalentStroke_yes">
+            <input type="radio" id="prevalentStroke_yes" name="prevalentStroke" value="1" required> Yes
+          </label>
+          <label for="prevalentStroke_no">
+            <input type="radio" id="prevalentStroke_no" name="prevalentStroke" value="0" required> No
+          </label>
+        </div>
+
+        <label for="prevalentHyp">Do you have Hypertension?</label>
+        <div id="prevalentHyp" class="radio-group">
+          <label for="prevalentHyp_yes">
+            <input type="radio" id="prevalentHyp_yes" name="prevalentHyp" value="1" required> Yes
+          </label>
+          <label for="prevalentHyp_no">
+            <input type="radio" id="prevalentHyp_no" name="prevalentHyp" value="0" required> No
+          </label>
+        </div>
+
+        <div class="submit">
+          <a href="/smoking_detail" class="nav-btn">Previous</a>
+          <button type="submit" class="nav-btn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disease Details</title>
+  <link rel="stylesheet" href="/static/medical_detail.css" />
+</head>
+<body>
+  <div class="home">
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+
+    <div class="main2">
+      <h2>Disease Details</h2>
+    </div>
+
+    <div class="personal">
+      <form action="/medical_detail" method="post">
+        <label>Are you taking BP Medicine?</label><br>
+        <label><input type="radio" name="BPMeds" value="1"> Yes</label>
+        <label><input type="radio" name="BPMeds" value="0"> No</label><br><br>
+
+        <label>Are you suffering from Diabetes?</label><br>
+        <label><input type="radio" name="diabetes" value="1"> Yes</label>
+        <label><input type="radio" name="diabetes" value="0"> No</label><br><br>
+
+        <label>Have you had a Stroke?</label><br>
+        <label><input type="radio" name="prevalentStroke" value="1"> Yes</label>
+        <label><input type="radio" name="prevalentStroke" value="0"> No</label><br><br>
+
+        <label>Do you have Hypertension?</label><br>
+        <label><input type="radio" name="prevalentHyp" value="1"> Yes</label>
+        <label><input type="radio" name="prevalentHyp" value="0"> No</label><br><br>
+
+        <div class="submit">
+          <a href="/smoking_detail" class="nav-btn">Previous</a>
+          <button type="submit" class="nav-btn">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

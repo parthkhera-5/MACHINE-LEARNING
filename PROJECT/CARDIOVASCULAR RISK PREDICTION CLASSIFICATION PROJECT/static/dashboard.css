@@ -1,0 +1,212 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+#main-header {
+    background-color: #2959b9;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    user-select: none;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* Navigation */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #ffd700;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #ffd700;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+/* Main Content */
+#welcome-section,
+.welcome-section {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInUp 1.2s ease forwards;
+    gap: 3rem;
+}
+
+.welcome-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.welcome-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2959b9;
+    font-weight: 700;
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* Image */
+.welcome-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(41, 89, 185, 0.3);
+}
+
+/* Start Button */
+.btn-start {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 15px 40px;
+    background-color: #d3364b;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(211, 54, 75, 0.4);
+    user-select: none;
+}
+
+.btn-start:hover,
+.btn-start:focus {
+    background-color: #a72637;
+    box-shadow: 0 6px 20px rgba(167, 38, 55, 0.6);
+}
+
+/* Footer */
+#main-footer {
+    margin-top: auto;
+    background-color: #2959b9;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 500;
+    user-select: none;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text,
+    .welcome-image {
+        max-width: 100%;
+    }
+
+    .welcome-image img {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+    }
+}

@@ -1,0 +1,203 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Checkup</title>
+  <link rel="stylesheet" href="/static/medical_checkup.css">
+</head>
+<body>
+  <div class="home"> 
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+ 
+    <div class="main2">
+      <h2>Medical Checkup Details</h2>
+    </div>
+ 
+    <div class="personal">
+      <form action="/predict" method="post"> 
+        <div class="personalone">
+        <label for="total_cholesterol">Total Cholesterol (mg/dL)</label>
+        <input type="number" id="total_cholesterol" name="total_cholesterol" oninput="checkCholesterol()" />
+        <small class="hint">Normal range: Less than 200 mg/dL</small>
+        <div id="cholesterol_category" class="category"></div>
+
+        <label for="sysBP">Systolic Blood Pressure (mm Hg)</label>
+        <input type="number" id="sysBP" name="sysBP" oninput="checkSysBP()" />
+        <small class="hint">Normal range: 90 to 120 mm Hg</small>
+        <div id="sysbp_category" class="category"></div>
+
+        <label for="diaBP">Diastolic Blood Pressure (mm Hg)</label>
+        <input type="number" id="diaBP" name="diaBP" oninput="checkDiaBP()" />
+        <small class="hint">Normal range: 60 to 80 mm Hg</small>
+        <div id="diabp_category" class="category"></div>
+
+        <label for="bmi">Body Mass Index (BMI)</label>
+        <input type="number" step="0.1" id="bmi" name="bmi" oninput="checkBMI()" />
+        <small class="hint">Normal range: 18.5 to 24.9</small>
+        <div id="bmi_category" class="category"></div>
+
+        <label for="heart_rate">Heart Rate (bpm)</label>
+        <input type="number" id="heart_rate" name="heart_rate" oninput="checkHeartRate()" />
+        <small class="hint">Normal range: 60 to 100 bpm</small>
+        <div id="heartrate_category" class="category"></div>
+
+        <label for="glucose">Glucose (mg/dL)</label>
+        <input type="number" id="glucose" name="glucose" oninput="checkGlucose()" />
+        <small class="hint">Normal range: 70 to 100 mg/dL</small>
+        <div id="glucose_category" class="category"></div>
+
+         </div>
+
+ 
+        <div class="submit">
+          <a href="/templates/medical_detail.html" class="nav-btn">Previous</a>
+          <button type="submit" class="nav-btn">Submit Test</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/static/medical_checkup.js"></script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Checkup</title>
+  <link rel="stylesheet" href="/static/medical_checkup.css">
+</head>
+<body>
+  <div class="home">
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+
+    <div class="main2">
+      <h2>Medical Checkup Details</h2>
+    </div>
+
+    <div class="personal">
+      <form action="/medical_checkup" method="post">
+        <label for="total_cholesterol">Total Cholesterol (mg/dL)</label>
+        <input type="number" id="total_cholesterol" name="total_cholesterol" required />
+        <small class="hint">Normal range: Less than 200 mg/dL</small><br><br>
+
+        <label for="sysBP">Systolic Blood Pressure (mm Hg)</label>
+        <input type="number" id="sysBP" name="sysBP" required />
+        <small class="hint">Normal range: 90 to 120 mm Hg</small><br><br>
+
+        <label for="diaBP">Diastolic Blood Pressure (mm Hg)</label>
+        <input type="number" id="diaBP" name="diaBP" required />
+        <small class="hint">Normal range: 60 to 80 mm Hg</small><br><br>
+
+        <label for="bmi">Body Mass Index (BMI)</label>
+        <input type="number" step="0.1" id="bmi" name="bmi" required />
+        <small class="hint">Normal range: 18.5 to 24.9</small><br><br>
+
+        <label for="heart_rate">Heart Rate (bpm)</label>
+        <input type="number" id="heart_rate" name="heart_rate" required />
+        <small class="hint">Normal range: 60 to 100 bpm</small><br><br>
+
+        <label for="glucose">Glucose (mg/dL)</label>
+        <input type="number" id="glucose" name="glucose" required />
+        <small class="hint">Normal range: 70 to 100 mg/dL</small><br><br>
+
+        <div class="submit">
+          <a href="/medical_detail" class="nav-btn">Previous</a>
+          <button type="submit" class="nav-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/static/medical_checkup.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Checkup</title>
+  <link rel="stylesheet" href="/static/medical_checkup.css">
+</head>
+<body>
+  <div class="home"> 
+    <div class="main">
+      <h1>Cardiovascular Risk Prediction</h1>
+    </div>
+
+    <div class="checkup">
+      <p>Let's get a quick checkup to check the risk of heart disease</p>
+    </div>
+ 
+    <div class="main2">
+      <h2>Medical Checkup Details</h2>
+    </div>
+ 
+    <div class="personal">
+      <form action="/medical_checkup" method="post"> 
+        <label for="total_cholesterol">Total Cholesterol (mg/dL)</label>
+        <p>Adults < 200 mg/dL</p>
+        <p>Children < 170 mg/dL</p>
+        <input type="number" id="total_cholesterol" placeholder="Enter your cholestrol" name="total_cholesterol" required />
+
+        <label for="sysBP">Systolic Blood Pressure (mm Hg)</label>
+        <p>Normal < 120/80 mmHg</p>
+        <p>For men: 124/77 mmHg</p>
+        <p>For women: 122/74 mmHg</p>
+        <input type="number" id="sysBP" placeholder="Enter your Systolic Blood Pressure" name="sysBP" required />
+
+        <label for="diaBP">Diastolic Blood Pressure (mm Hg)</label>
+        <p>Normal < 120/80 mmHg</p>
+        <p>For men: 124/77 mmHg</p>
+        <p>For women: 122/74 mmHg</p>
+        <input type="number" id="diaBP" placeholder="Enter your Diastolic Blood Pressure" name="diaBP" required />
+
+        <label for="bmi">Body Mass Index (BMI)</label>
+        <p>Underweight: BMI less than 18.5 kg/m²</p>
+        <p>Normal weight: BMI between 18.5 and 24.9 kg/m²</p>
+        <p>Overweight: BMI between 25 and 29.9 kg/m²</p>
+        <p>Obesity: BMI of 30 kg/m² or greater</p>
+        <input type="number" step="0.1" id="bmi" placeholder="Enter your BMI" name="bmi" required />
+
+        <label for="heart_rate">Heart Rate (bpm)</label>
+        <p>Normal Adult: 40-60 bpm</p>
+        <p>Athletes: 40bpm</p>
+        <input type="number" id="heart_rate" placeholder="Enter your Heart Rate" name="heart_rate" required />
+
+        <label for="glucose">Glucose (mg/dL)</label>
+        <p>Normal: 70-99mg/dL</p>
+        <input type="number" id="glucose" placeholder="Enter your Glucose" name="glucose" required />
+
+        <div class="submit">
+          <a href="/medical_detail" class="nav-btn">Previous</a>
+          <button type="submit" class="nav-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
