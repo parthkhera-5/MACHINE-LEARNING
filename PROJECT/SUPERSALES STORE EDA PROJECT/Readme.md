@@ -1,4 +1,4 @@
-# Superstore Sales Data Analysis
+# Supersale Stores Data Analysis
 
 ## Project Overview
 
