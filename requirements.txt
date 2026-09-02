@@ -2,7 +2,6 @@ Flask
 scikit-learn
 pandas
 numpy
-# difflib
 requests
 gunicorn
 
