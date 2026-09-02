@@ -1,4 +1,5 @@
 import requests
+import os
 import pandas as pd
 import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -21,12 +22,11 @@ vectors = cv.fit_transform(movies['combine'])
 similarity = cosine_similarity(vectors)
 
 # Replace with your actual OMDb API key
-OMDB_API_KEY = ''
-
+OMDB_API_KEY = os.getenv("OMDB_API_KEY", "ce4d62fb")
 
 def fetch_omdb_data(title):
     """Fetch poster and rating from OMDb API."""
-    url = f'http://www.omdbapi.com/?t={requests.utils.quote(title)}&apikey={OMDB_API_KEY}'
+    url = f'https://www.omdbapi.com/?t={requests.utils.quote(title)}&apikey={OMDB_API_KEY}'
     try:
         response = requests.get(url)
         data = response.json()
