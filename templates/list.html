@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommendations</title>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}"> -->
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+    .mainone {
+      min-height: 100vh;
+      background-image: url('/static/MovieBackground.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .mainone::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .mainone > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .main {
+      width: 100%;
+      padding: 40px 0;
+      background-color: rgba(3, 10, 87, 0.8);
+      border-bottom: solid rgb(50, 90, 50) 6px;
+      text-align: center;
+      font-size: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .suggest {
+      padding: 30px;
+      max-width: 1500px;
+      width: 95%;
+      background-color: rgba(25, 25, 63, 0.7);
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+
+    #home {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+    }
+
+    #btns {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      background: linear-gradient(45deg, #00c3ff, #0044ff);
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    #btns:hover {
+      background: linear-gradient(45deg, #0077aa, #002288);
+      transform: scale(1.05);
+    }
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: rgba(14, 75, 9, 0.8);
+  border: solid rgb(158, 148, 5) 4px;
+  border-radius: 15px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.box-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+.box-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #d9dbff;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  border-radius: 15px;
+}
+
+.box:hover .box-text {
+  opacity: 1;
+}
+
+#boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.cast h1,
+.rating h1 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #d9dbff;
+}
+
+.summary h1 {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="mainone">
+  <div class="main">
+    <h1>Recommended Movies based on your selection!</h1>
+  </div>
+  <div class="suggest">
+    <div id="home">
+      <button id="btns"><a href="/">Home Page</a></button>
+    </div>
+    <!-- Dynamic cards will appear here -->
+    <div id="boxes">
+  {% for rec in recommendations %}
+    <!-- <div class="box">
+      <img src="{{ rec.poster }}" alt="{{ rec.name }}" style="width:100%; height:auto; border-radius: 10px; margin-bottom: 10px;">
+      <div class="title"><h1>{{ rec.name }}</h1></div>
+      <div class="summary"><h1><strong>Overview:</strong> {{ rec.overview }}</h1></div>
+      <div class="cast"><h1><strong>Cast:</strong> {{ rec.cast }}</h1></div>
+    </div> -->
+<div class="box">
+  <img src="{{ rec.poster }}" alt="{{ rec.name }}" class="box-img">
+  <div class="box-text">
+    <div class="info">
+      <div class="title"><h1>{{ rec.name }}</h1></div>
+      <div class="cast"><h1><strong>Cast:</strong> {{ rec.cast }}</h1></div>
+      <div class="rating"><h1><strong>Rating:</strong> {{ rec.rating }}</h1></div>
+    </div>
+    <div class="summary"><h1><strong>Overview:</strong> {{ rec.overview }}</h1></div>
+  </div>
+</div>
+
+
+  {% endfor %}
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const data = localStorage.getItem("recommendations");
+
+    if (!data) return;
+
+    const movies = JSON.parse(data);
+    const container = document.getElementById("boxes");
+    container.innerHTML = ""; // Clear any previous content
+
+    movies.forEach(movie => {
+      const box = document.createElement("div");
+      box.className = "box";
+      box.innerHTML = `
+        <div class="title"><h1>${movie.title}</h1></div>
+        <div class="cast"><h1><strong>Cast:</strong> ${movie.cast}</h1></div>
+        <div class="summary"><h1><strong>Summary:</strong> ${movie.summary}</h1></div>
+      `;
+      container.appendChild(box);
+    });
+  });
+</script> -->
+</body>
+</html>
