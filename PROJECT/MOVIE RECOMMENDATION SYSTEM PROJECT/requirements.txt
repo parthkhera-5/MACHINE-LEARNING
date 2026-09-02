@@ -1,0 +1,10 @@
+Flask
+scikit-learn
+pandas
+numpy
+difflib
+requests
+gunicorn
+
+# pip install -r requirements.txt
+
